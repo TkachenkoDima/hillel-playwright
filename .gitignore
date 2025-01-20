@@ -1,0 +1,43 @@
+#Environment files
+.env
+*.DS_Store
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+
+# Dependencies
+node_modules/
+
+# IDEs and editors
+*.iml
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/
+.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Miscellaneous
+/.sass-cache
+/connect.lock
+/coverage
+npm-debug.log
+yarn-error.log
+/typings
+coverage/
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
