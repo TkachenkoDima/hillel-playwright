@@ -12,9 +12,10 @@ export default defineConfig({
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
   ],
   use: {
+    baseURL: 'https://qauto.forstudy.space',
     headless: true,
     actionTimeout: 0,
-    trace: 'on',
+    trace: 'off',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure', 
   },
