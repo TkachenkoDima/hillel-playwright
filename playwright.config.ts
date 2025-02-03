@@ -1,4 +1,5 @@
 import { defineConfig } from '@playwright/test';
+import { config } from './data.config';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -12,7 +13,7 @@ export default defineConfig({
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
   ],
   use: {
-    baseURL: 'https://qauto.forstudy.space',
+    baseURL: config.baseURL,
     headless: true,
     actionTimeout: 0,
     trace: 'off',
