@@ -20,4 +20,5 @@ test('User can add a car to the garage', async ({ garagePageAsLoggedUser }) => {
 
   await expect(garagePageAsLoggedUser.emptyGarageMessage).toHaveCount(0);
   await expect(garagePageAsLoggedUser.addedCarItem).toBeVisible();
+  
 });
