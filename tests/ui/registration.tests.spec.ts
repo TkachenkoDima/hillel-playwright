@@ -4,7 +4,7 @@ import { MainPage } from '../../pages/MainPage';
 import { UserModel } from '../../models/UserModel';
 import { GaragePage } from '../../pages/GaragePage';
 import { generateRandomString, generatePassword } from '../../utils/generators';
-import { BasePage } from '../../pages/basePage';
+import { BasePage } from '../../pages/BasePage';
 
 test.describe('Registration tests', () => {
     let basePage: BasePage;
