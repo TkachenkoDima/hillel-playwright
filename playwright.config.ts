@@ -26,7 +26,7 @@ export default defineConfig({
       name: 'ui-tests',
       testDir: 'tests/ui',
       use: {
-        headless: false,
+        headless: true,
         video: 'retain-on-failure',  
       },
     },

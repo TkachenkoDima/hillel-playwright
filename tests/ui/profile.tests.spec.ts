@@ -2,7 +2,7 @@ import { test } from './fixtures';
 import { expect } from '@playwright/test';
 
 import { MainPage } from '../../pages/MainPage';
-import { BasePage } from '../../pages/basePage';
+import { BasePage } from '../../pages/BasePage';
 import { config } from '../../data.config';
 import { ProfilePage } from '../../pages/ProfilePage';
 import { faker } from '@faker-js/faker';

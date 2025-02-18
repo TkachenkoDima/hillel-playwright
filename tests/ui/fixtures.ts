@@ -2,7 +2,7 @@ import { test as base } from '@playwright/test';
 import { MainPage } from '../../pages/MainPage';
 import { GaragePage } from '../../pages/GaragePage';
 import { config } from '../../data.config';
-import { BasePage } from '../../pages/basePage';
+import { BasePage } from '../../pages/BasePage';
 
 type fixturePages = {
   garagePage: GaragePage;
