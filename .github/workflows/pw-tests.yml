@@ -19,8 +19,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - name : Setup action    
+        - name: Checkout repository    
           uses: actions/checkout@v4
+          
         - name: Set up Node.js
           uses: actions/setup-node@v4
           with:
@@ -42,8 +43,9 @@ jobs:
             name: playwright-report
             path: playwright-report/
             retention-days: 7
+
     deploy:
-        if: ${{ always () }}
+        if: always()
         runs-on: ubuntu-latest 
         needs: test 
         permissions:
@@ -52,18 +54,21 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
+
             - name: Download Playwright report artifact 
-              uses: actions/download-artifact@v4 
+              uses: actions/download-artifact@v4
               with:
                 name: playwright-report
                 path: out
+
             - name: Setup Pages
-              uses: actions/configure-pages@v3
-            - name: Upload artifact to Pages 
+              uses: actions/configure-pages@v4
+
+            - name: Upload artifact to Pages
               uses: actions/upload-pages-artifact@v1
               with:
                 path: out
+
             - name: Deploy to GitHub Pages 
               id: deployment
-              uses: actions/deploy-pages@v3
-              
+              uses: actions/deploy-pages@v4
